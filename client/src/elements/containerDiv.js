@@ -51,6 +51,7 @@ const containerDiv = styled.div`
   ${(props) => (props.heightpercent ? `height: ${props.heightpercent}%;` : null)};
   ${(props) => (props.height ? `height: ${props.height}px;` : null)};
   ${(props) => (props.width ? `width: ${props.width}px;` : null)};
+  ${(props) => (props.widthi ? `width: ${props.width};` : null)};
   ${(props) => (props.widthauto ? 'width: auto;' : null)};
   ${(props) => (props.min_height ? `min-height: ${props.min_height}px;` : null)};
   ${(props) => (props.min_heightvh ? `min-height: ${props.min_heightvh}vh;` : null)};
@@ -62,6 +63,10 @@ const containerDiv = styled.div`
 
   /* left: auto;
   z-index: 1; */
+  ${(props) => (props.font_size ? `font-size: ${props.font_size};` : null)};
+  ${(props) => (props.cursor ? `cursor: ${props.cursor};` : null)};
+  ${(props) => (props.font_weight ? `font-weight: ${props.font_weight};` : null)};
+  ${(props) => (props.color ? `color: ${props.color};` : null)};
   ${(props) => (props.overflow_y ? `overflow-y: ${props.overflow_y};` : null)};
   ${(props) => (props.overflow ? `overflow: ${props.overflow};` : null)};
   ${(props) => (props.word_break ? `word-break: ${props.word_break};` : null)};
@@ -72,7 +77,10 @@ const containerDiv = styled.div`
   ${(props) => (props.blur ? 'background: linear-gradient(270deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 90.82%) !important;' : null)};
   ${(props) => (props.transform ? `transform: ${props.transform};` : null)};
   ${(props) => (props.transition ? `transition: ${props.transition};` : null)};
-  ${(props) => (props.widthSearch === true ? 'width: 600px;' : 'width: 460px;')}
+  ${(props) => (props.hover ? `&:hover {
+    border-bottom: 2px solid rgb(118,118,118);
+  }` : null)};
+
 `;
 
 export default containerDiv;
