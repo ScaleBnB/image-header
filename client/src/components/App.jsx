@@ -5,6 +5,7 @@ import MinImageHeader from './MinImageHeader.jsx';
 import Modal from './Modal.jsx';
 import SaveButtonPortal from './SaveButtonPortal.jsx';
 import ShareButtonPortal from './ShareButtonPortal.jsx';
+// import Header from './Header/Header.jsx';
 
 const App = (props) => {
   const [loadedGallery, setLoadedGallery] = useState(null);
@@ -64,15 +65,13 @@ const App = (props) => {
     fetchData();
   }, []);
 
-  console.log(isShowSave);
-  console.log(isShowShare);
-
 
   let content = <p>Loading...</p>;
   if (!isShowModal && loadedGallery
     && dimensions.width / screen.width > 0.58046875) {
     content = (
       <>
+        {/* <Header /> */}
         <ImageHeader
           data-testid="header"
           viewSelectHandler={viewSelectHandler}
@@ -95,6 +94,7 @@ const App = (props) => {
     && dimensions.width / screen.width <= 0.58046875) {
     content = (
       <>
+        <Header />
         <MinImageHeader
           viewSelectHandler={viewSelectHandler}
           listingObj={loadedGallery}
