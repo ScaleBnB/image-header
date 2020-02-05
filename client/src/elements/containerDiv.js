@@ -14,6 +14,7 @@ const containerDiv = styled.div`
 
   /*Top right left bottom*/
   ${(props) => (props.top ? `top: ${props.top}px;` : null)}
+  ${(props) => (props.toppercent ? `top: ${props.toppercent}%;` : null)}
   ${(props) => (props.right ? `right: ${props.right}px;` : null)}
   ${(props) => (props.bottom ? `bottom: ${props.bottom}px;` : null)};
   ${(props) => (props.left ? `left: ${props.left}px;` : null)};
@@ -23,6 +24,9 @@ const containerDiv = styled.div`
   ${(props) => (props.border_bottom ? `border-bottom: ${props.border_bottom}px;` : null)}
   ${(props) => (props.border_top2 ? `border-top: ${props.border_top2};` : null)}
   ${(props) => (props.border_bottom2 ? `border-bottom: ${props.border_bottom2};` : null)}
+  ${(props) => (props.border ? `border: ${props.border};` : null)}
+  ${(props) => (props.border_radius ? `border-radius: ${props.border_radius};` : null)}
+  ${(props) => (props.box_shadow ? `box-shadow: ${props.box_shadow};` : null)}
 
   /* Margin & Padding*/
   ${(props) => (props.padding ? `padding: ${props.padding}px;` : null)}
@@ -37,6 +41,7 @@ const containerDiv = styled.div`
   ${(props) => (props.bottom_margin ? `margin-bottom: ${props.bottom_margin}px;` : null)}
   ${(props) => (props.margin_leftauto ? 'margin-left: auto;' : null)}
   ${(props) => (props.margin_rightauto ? 'margin-right: auto;' : null)}
+  
 
   /* Height & Width */
   ${(props) => (props.flex_basis ? `flex-basis: ${props.flex_basis}px;` : null)};
@@ -65,6 +70,9 @@ const containerDiv = styled.div`
   ${(props) => (props.background_color ? `background-color: ${props.background_color};` : null)};
   ${(props) => (props.blur === 'left' ? 'transform: rotate(180deg) !important;' : null)};
   ${(props) => (props.blur ? 'background: linear-gradient(270deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 90.82%) !important;' : null)};
+  ${(props) => (props.transform ? `transform: ${props.transform};` : null)};
+  ${(props) => (props.transition ? `transition: ${props.transition};` : null)};
+  ${(props) => (props.widthSearch === true ? 'width: 600px;' : 'width: 460px;')}
 `;
 
 export default containerDiv;

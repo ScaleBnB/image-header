@@ -5,7 +5,7 @@ import MinImageHeader from './MinImageHeader.jsx';
 import Modal from './Modal.jsx';
 import SaveButtonPortal from './SaveButtonPortal.jsx';
 import ShareButtonPortal from './ShareButtonPortal.jsx';
-// import Header from './Header/Header.jsx';
+import Header from './Header/Header.jsx';
 
 const App = (props) => {
   const [loadedGallery, setLoadedGallery] = useState(null);
@@ -71,8 +71,8 @@ const App = (props) => {
     && dimensions.width / screen.width > 0.58046875) {
     content = (
       <>
-        {/* <Header /> */}
-        <ImageHeader
+        <Header />
+        {/* <ImageHeader
           data-testid="header"
           viewSelectHandler={viewSelectHandler}
           clickedImageHandler={clickedImageHandler}
@@ -80,7 +80,7 @@ const App = (props) => {
           listingObj={loadedGallery}
           shareButtonHandler={shareButtonHandler}
           saveButtonHandler={saveButtonHandler}
-        />
+        /> */}
         {isShowSave ?
           <SaveButtonPortal saveButtonHandler={saveButtonHandler} />
           : null}
