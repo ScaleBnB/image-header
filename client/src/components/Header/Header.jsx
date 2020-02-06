@@ -38,7 +38,7 @@ const Header = (props) => {
           <UL>
             <LI name="english">
               <ContainerDiv position="relative" hover="yes" padding="0px 8" heightpercent="100" line_height="80px" vertical_align="middle">
-                <ContainerDiv display="inline-block" font_size="13px" cursor="pointer" font_weight="400" color="#484848" vertical_align="middle" line_height="1" padding="8">
+                <ContainerDiv display="inline-block" font_size="14px" font_family="Nunito sans" cursor="pointer" font_weight="600" color="#484848" vertical_align="middle" line_height="1" padding="8">
                   <span style={{ marginRight: '6px' }}>
                     <SVG
                       src={globe}
@@ -50,35 +50,35 @@ const Header = (props) => {
             </LI>
             <LI name="english">
               <ContainerDiv position="relative" hover="yes" padding="0px 8" heightpercent="100" line_height="80px" vertical_align="middle">
-                <ContainerDiv display="inline-block" font_size="13px" cursor="pointer" font_weight="400" color="#484848" vertical_align="middle" line_height="1" padding="8">
+                <ContainerDiv display="inline-block" font_size="14px" font_family="Nunito sans" cursor="pointer" font_weight="600" color="#484848" vertical_align="middle" line_height="1" padding="8">
                   $ USD
                 </ContainerDiv>
               </ContainerDiv>
             </LI>
             <LI name="english">
               <ContainerDiv position="relative" hover="yes" padding="0px 8" heightpercent="100" line_height="80px" vertical_align="middle">
-                <ContainerDiv display="inline-block" font_size="13px" cursor="pointer" font_weight="400" color="#484848" vertical_align="middle" line_height="1" padding="8">
+                <ContainerDiv display="inline-block" font_size="14px" font_family="Nunito sans" cursor="pointer" font_weight="600" color="#484848" vertical_align="middle" line_height="1" padding="8">
                   Become a host
                 </ContainerDiv>
               </ContainerDiv>
             </LI>
             <LI name="english">
               <ContainerDiv position="relative" hover="yes" padding="0px 8" heightpercent="100" line_height="80px" vertical_align="middle">
-                <ContainerDiv display="inline-block" font_size="13px" cursor="pointer" font_weight="400" color="#484848" vertical_align="middle" line_height="1" padding="8">
+                <ContainerDiv display="inline-block" font_size="14px" font_family="Nunito sans" cursor="pointer" font_weight="600" color="#484848" vertical_align="middle" line_height="1" padding="8">
                   Help
                 </ContainerDiv>
               </ContainerDiv>
             </LI>
             <LI name="english">
               <ContainerDiv position="relative" hover="yes" padding="0px 8" heightpercent="100" line_height="80px" vertical_align="middle">
-                <ContainerDiv display="inline-block" font_size="13px" cursor="pointer" font_weight="400" color="#484848" vertical_align="middle" line_height="1" padding="8">
+                <ContainerDiv display="inline-block" font_size="14px" font_family="Nunito sans" cursor="pointer" font_weight="600" color="#484848" vertical_align="middle" line_height="1" padding="8">
                   Sign up
                 </ContainerDiv>
               </ContainerDiv>
             </LI>
             <LI name="english">
               <ContainerDiv position="relative" hover="yes" padding="0px 8" heightpercent="100" line_height="80px" vertical_align="middle">
-                <ContainerDiv display="inline-block" font_size="13px" cursor="pointer" font_weight="400" color="#484848" vertical_align="middle" line_height="1" padding="8">
+                <ContainerDiv display="inline-block" font_size="14px" font_family="Nunito sans" cursor="pointer" font_weight="600" color="#484848" vertical_align="middle" line_height="1" padding="8">
                   Log in
                 </ContainerDiv>
               </ContainerDiv>

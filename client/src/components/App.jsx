@@ -49,8 +49,6 @@ const App = (props) => {
 
 
   const fetchData = () => {
-    // const url = `http://localhost:3000/gallery/${id}`;
-
     axios.get(props.url)
       .then(({ data }) => {
         setLoadedGallery(data[0]);
@@ -66,13 +64,18 @@ const App = (props) => {
   }, []);
 
 
-  let content = <p>Loading...</p>;
+  let content =
+    (
+      <>
+        <Header />
+      </>);
+
   if (!isShowModal && loadedGallery
     && dimensions.width / screen.width > 0.58046875) {
     content = (
       <>
         <Header />
-        {/* <ImageHeader
+        <ImageHeader
           data-testid="header"
           viewSelectHandler={viewSelectHandler}
           clickedImageHandler={clickedImageHandler}
@@ -80,7 +83,7 @@ const App = (props) => {
           listingObj={loadedGallery}
           shareButtonHandler={shareButtonHandler}
           saveButtonHandler={saveButtonHandler}
-        /> */}
+        />
         {isShowSave ?
           <SaveButtonPortal saveButtonHandler={saveButtonHandler} />
           : null}

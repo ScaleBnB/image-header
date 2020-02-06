@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "build": "webpack -w",
-    "start": "nodemon ./server/index.js",
+    "build": "webpack",
+    "start": "node ./server/index.js",
     "seed": "node ./server/db/seed.js"
   },
   "repository": {
@@ -25,6 +25,7 @@
     "@testing-library/react": "^9.4.0",
     "axios": "^0.19.2",
     "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "faker": "^4.1.0",
     "jest": "^25.1.0",

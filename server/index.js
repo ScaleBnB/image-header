@@ -5,7 +5,10 @@ const path = require('path');
 const app = express();
 const port = 3000;
 const controllers = require('./controllers');
+const cors = require('cors');
+const seedDb = require('./db/seed.js');
 
+app.use(cors())
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(morgan('dev'));

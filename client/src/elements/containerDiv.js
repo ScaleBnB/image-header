@@ -64,8 +64,9 @@ const containerDiv = styled.div`
   /* left: auto;
   z-index: 1; */
   ${(props) => (props.font_size ? `font-size: ${props.font_size};` : null)};
-  ${(props) => (props.cursor ? `cursor: ${props.cursor};` : null)};
   ${(props) => (props.font_weight ? `font-weight: ${props.font_weight};` : null)};
+  ${(props) => (props.font_family ? `font-family: ${props.font_family};` : null)};
+  ${(props) => (props.cursor ? `cursor: ${props.cursor};` : null)};
   ${(props) => (props.color ? `color: ${props.color};` : null)};
   ${(props) => (props.overflow_y ? `overflow-y: ${props.overflow_y};` : null)};
   ${(props) => (props.overflow ? `overflow: ${props.overflow};` : null)};

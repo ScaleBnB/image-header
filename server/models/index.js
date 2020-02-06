@@ -1,4 +1,8 @@
+const mongoose = require('mongoose');
+const mongoUrl = 'mongodb://database/gallery';
 const GalleryModel = require('../db');
+
+mongoose.connect(mongoUrl, { server: { reconnectTries: Number.MAX_VALUE } });
 
 module.exports = {
   gallery: {

@@ -13,7 +13,7 @@ const ImageHeader = (
     listingObj,
     dimensions }) => (
     <>
-      <ContainerDiv position="absolute" top="0" left="0" box="border-box" widthpercent="100">
+      <ContainerDiv position="absolute" top="83" left="0" box="border-box" widthpercent="100">
         <FiveImages
           viewSelectHandler={viewSelectHandler}
           clickedImageHandler={clickedImageHandler}
