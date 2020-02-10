@@ -22,7 +22,7 @@ const Header = (props) => {
 
   const content = (
     <>
-      <ContainerDiv position="relative" height="81" widthpercent="100" border-spacing="0">
+      <ContainerDiv name="headerbar" position="absolute" top="0" left="0" height="81" widthpercent="100" border-spacing="0">
         <ContainerDiv name="logo" position="absolute" toppercent="50" transform="translateY(-50%)" box_sizing="border-box" padding="24">
           <SVG
             src={logo}

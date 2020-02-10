@@ -19,4 +19,4 @@ app.get('/gallery/:id', controllers.gallery.getOne);
 
 app.get('/gallery', controllers.gallery.getAll);
 
-app.listen(port, () => console.log(`Gallery server listening on port ${port}!`));
+app.listen(port, () => console.log(`Server listening on port ${port}!`));

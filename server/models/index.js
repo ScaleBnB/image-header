@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
-const mongoUrl = 'mongodb://database/gallery';
+// const mongoUrl = 'mongodb://database/gallery';
+const mongoUrl = 'mongodb://localhost/gallery';
 const GalleryModel = require('../db');
 
 mongoose.connect(mongoUrl, { server: { reconnectTries: Number.MAX_VALUE } });
