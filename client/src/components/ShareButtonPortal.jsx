@@ -19,10 +19,10 @@ const ShareButtonPortal = ({ shareButtonHandler }) => {
     createPortal(
       <>
         <ContainerDiv position="relative">
-          <ContainerDiv onClick={() => alert('hi')} widthpercent="100" heightpercent="100" top="0" position="fixed" z_index="1999" />
           <ContainerDiv overflow_y="auto" box_sizing="border-box" background="rgba(0, 0, 0, 0.75) !important;" z_index="2000" position="fixed" top="0" right="0" left="0" bottom="0">
             <ContainerDiv display="flex" align-items="center" min_heightvh="100">
-              <ContainerDiv name="3" position="relative" margin_leftauto="true" margin_rightauto="true">
+              <ContainerDiv onClick={() => shareButtonHandler(false)} position="fixed" top="0" right="0" left="0" bottom="0" z_index="1" />
+              <ContainerDiv name="3" z_index="2" position="relative" margin_leftauto="true" margin_rightauto="true">
                 <ContainerDiv name="4" background_color="rgb(255, 255, 255)" position="relative" widthvw="90" max_width="376" overflow="visible" top_margin="64" bottom_margin="64">
                   <ContainerDiv padding="32">
                     <ContainerDiv name="Xclose" bottom_margin="24">

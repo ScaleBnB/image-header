@@ -1,12 +1,6 @@
 const models = require('../models');
 const jsonData = require('./dummydata.js');
 
-models.gallery.deleteAll((err, data) => {
-  if (err) {
-    console.log(err);
-  }
-  console.log(`deleted count: ${data.deletedCount}`);
-});
 
 let count = 1;
 const dataExtract = jsonData.map((obj) => {

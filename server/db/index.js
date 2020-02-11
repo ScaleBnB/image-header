@@ -1,10 +1,11 @@
 const mongoose = require('mongoose');
+// const mongoUrl = 'mongodb://database/gallery';
 
-mongoose.connect('mongodb://localhost/gallery', { useNewUrlParser: true })
-  .then(() => {
-    console.log('Successfully connected to MongoDb');
-  })
-  .catch((error) => console.log(error));
+// mongoose.connect(mongoUrl, { server: { reconnectTries: Number.MAX_VALUE } })
+//   .then(() => {
+//     console.log('Successfully connected to MongoDb');
+//   })
+//   .catch((error) => console.log(error));
 
 
 const GallerySchema = mongoose.Schema({

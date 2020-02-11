@@ -14,6 +14,7 @@ const containerDiv = styled.div`
 
   /*Top right left bottom*/
   ${(props) => (props.top ? `top: ${props.top}px;` : null)}
+  ${(props) => (props.toppercent ? `top: ${props.toppercent}%;` : null)}
   ${(props) => (props.right ? `right: ${props.right}px;` : null)}
   ${(props) => (props.bottom ? `bottom: ${props.bottom}px;` : null)};
   ${(props) => (props.left ? `left: ${props.left}px;` : null)};
@@ -23,6 +24,9 @@ const containerDiv = styled.div`
   ${(props) => (props.border_bottom ? `border-bottom: ${props.border_bottom}px;` : null)}
   ${(props) => (props.border_top2 ? `border-top: ${props.border_top2};` : null)}
   ${(props) => (props.border_bottom2 ? `border-bottom: ${props.border_bottom2};` : null)}
+  ${(props) => (props.border ? `border: ${props.border};` : null)}
+  ${(props) => (props.border_radius ? `border-radius: ${props.border_radius};` : null)}
+  ${(props) => (props.box_shadow ? `box-shadow: ${props.box_shadow};` : null)}
 
   /* Margin & Padding*/
   ${(props) => (props.padding ? `padding: ${props.padding}px;` : null)}
@@ -37,6 +41,7 @@ const containerDiv = styled.div`
   ${(props) => (props.bottom_margin ? `margin-bottom: ${props.bottom_margin}px;` : null)}
   ${(props) => (props.margin_leftauto ? 'margin-left: auto;' : null)}
   ${(props) => (props.margin_rightauto ? 'margin-right: auto;' : null)}
+  
 
   /* Height & Width */
   ${(props) => (props.flex_basis ? `flex-basis: ${props.flex_basis}px;` : null)};
@@ -46,6 +51,7 @@ const containerDiv = styled.div`
   ${(props) => (props.heightpercent ? `height: ${props.heightpercent}%;` : null)};
   ${(props) => (props.height ? `height: ${props.height}px;` : null)};
   ${(props) => (props.width ? `width: ${props.width}px;` : null)};
+  ${(props) => (props.widthi ? `width: ${props.width};` : null)};
   ${(props) => (props.widthauto ? 'width: auto;' : null)};
   ${(props) => (props.min_height ? `min-height: ${props.min_height}px;` : null)};
   ${(props) => (props.min_heightvh ? `min-height: ${props.min_heightvh}vh;` : null)};
@@ -57,6 +63,11 @@ const containerDiv = styled.div`
 
   /* left: auto;
   z-index: 1; */
+  ${(props) => (props.font_size ? `font-size: ${props.font_size};` : null)};
+  ${(props) => (props.font_weight ? `font-weight: ${props.font_weight};` : null)};
+  ${(props) => (props.font_family ? `font-family: ${props.font_family};` : null)};
+  ${(props) => (props.cursor ? `cursor: ${props.cursor};` : null)};
+  ${(props) => (props.color ? `color: ${props.color};` : null)};
   ${(props) => (props.overflow_y ? `overflow-y: ${props.overflow_y};` : null)};
   ${(props) => (props.overflow ? `overflow: ${props.overflow};` : null)};
   ${(props) => (props.word_break ? `word-break: ${props.word_break};` : null)};
@@ -65,6 +76,12 @@ const containerDiv = styled.div`
   ${(props) => (props.background_color ? `background-color: ${props.background_color};` : null)};
   ${(props) => (props.blur === 'left' ? 'transform: rotate(180deg) !important;' : null)};
   ${(props) => (props.blur ? 'background: linear-gradient(270deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 90.82%) !important;' : null)};
+  ${(props) => (props.transform ? `transform: ${props.transform};` : null)};
+  ${(props) => (props.transition ? `transition: ${props.transition};` : null)};
+  ${(props) => (props.hover ? `&:hover {
+    border-bottom: 2px solid rgb(118,118,118);
+  }` : null)};
+
 `;
 
 export default containerDiv;

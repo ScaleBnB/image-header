@@ -15,6 +15,7 @@ const bigImage = styled.img`
   opacity: 1;
   transition: -ms-transform 450ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s, -webkit-transform 450ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s, transform 450ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s, opacity 450ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s !important;
   max-width: 100%;
+  min-width: 100%;
   
   ${({ name, hoveredImage }) => name === hoveredImage ? hoverScaler(1.05) : hoverScaler(1)};
   ${({ name, hoveredImage }) => hoveredImage !== null && name !== hoveredImage ? 'opacity: 0.7' : 'opacity:1'};
