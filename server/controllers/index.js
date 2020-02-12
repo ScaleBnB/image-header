@@ -34,8 +34,44 @@ module.exports = {
       });
     },
 
+    postOne: (req, res) => {
+      const id = req.params.id;
+      models.gallery.postOne(id, (err, results) => {
+        if (err) {
+          console.log(err);
+        } else {
+          console.log(results);
+          res.json(results);
+        }
+      });
+    },
+
+    putOne: (req, res) => {
+      const id = req.params.id;
+      models.gallery.putOne(id, (err, results) => {
+        if (err) {
+          console.log(err);
+        } else {
+          console.log(results);
+          res.json(results);
+        }
+      });
+    },
+
+    deleteOne: (req, res) => {
+      const id = req.params.id;
+      models.gallery.deleteOne(id, (err, results) => {
+        if (err) {
+          console.log(err);
+        } else {
+          console.log(results);
+          res.json(results);
+        }
+      });
+    },
+
     deleteAll: (req, res) => {
-      models.gallery.insertAll((err, results) => {
+      models.gallery.deleteAll((err, results) => {
         if (err) {
           console.log(err);
         } else {
