@@ -21,9 +21,9 @@ app.get('/gallery', controllers.gallery.getAll);
 
 app.post('/gallery', controllers.gallery.postOne)
 
-app.put('/gallery/:id', controllers.gallery.putOne)
+app.put('/gallery', controllers.gallery.putOne)
 
-app.delete('/gallery/:id', controllers.gallery.deleteOne)
+app.delete('/gallery', controllers.gallery.deleteOne)
 
 
 app.listen(port, () => console.log(`Server listening on port ${port}!`));
