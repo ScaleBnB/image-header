@@ -1,9 +1,9 @@
 const fs = require('fs');
-const file = "scalebnb_dummy_data_1.csv";
+const file = "cassandra.csv";
 
 const images = ['https://scalebnbimages.s3.us-east-2.amazonaws.com/stephanie-harvey-PPA6wsuedeM-unsplash.jpg', 'https://scalebnbimages.s3.us-east-2.amazonaws.com/kevin-fernandez-it-_C9yfRIM-unsplash.jpg', 'https://scalebnbimages.s3.us-east-2.amazonaws.com/luke-stackpoole-eWqOgJ-lfiI-unsplash.jpg', 'https://scalebnbimages.s3.us-east-2.amazonaws.com/jason-briscoe-AQl-J19ocWE-unsplash.jpg', 'https://scalebnbimages.s3.us-east-2.amazonaws.com/ostap-senyuk-mdHRaq_pwsI-unsplash.jpg'];
 
-fs.writeFileSync(file, 'listing_id,user_id,image_url,image_caption\n');
+fs.writeFileSync(file, 'id,listing_id,user_id,image_url,image_caption\n');
 
 const listings = [
     `Apartment in SoMa. Paradise in the middle of the city`,
@@ -26,14 +26,14 @@ function getRandomInt(min, max) {
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-
-for (let i = 1; i <= 5e6; i++) {
-    let listingOwner = getRandomInt(0, 10e6)
+let id = 1;
+for (let i = 1; i <= 10e6; i++) {
+    let listingOwner = getRandomInt(0, 20e6);
     let randomAmount = getRandomInt(5, 10);
-    for (let j = 0; j <= randomAmount; j++) {
+    for (let j = 1; j <= randomAmount; j++) {
         let randomPhoto = getRandomInt(0, 4);
         let randomPhotoDescription = getRandomInt(0, 4);
-        fs.appendFileSync(file, `${i},${listingOwner},${images[randomPhoto]},${descriptions[randomPhotoDescription]}\n`);
+        fs.appendFileSync(file, `${id},${i},${listingOwner},${images[randomPhoto]},${descriptions[randomPhotoDescription]}\n`);
+        id++;
     }
-    console.log('writing', i);
 }
