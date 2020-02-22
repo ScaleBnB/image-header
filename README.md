@@ -11,7 +11,7 @@
 #### GET listing/:id/images
 Returns a JSON object with all images where id matches the listing id.
 Example:
-[
+`[
     {
         "id": 1035,
         "listing_id": 125,
@@ -61,7 +61,7 @@ Example:
         "image_caption": "You can store your things here",
         "user_id": 1288267
     }
-]
+]`
 
 ### Post one:
 
