@@ -1,9 +1,69 @@
-const mongoose = require('mongoose');
-// const mongoUrl = 'mongodb://database/gallery';
-const mongoUrl = 'mongodb://localhost/gallery';
-const db = require('../db');
+var db = require('../index.js');
 
-mongoose.connect(mongoUrl, { server: { reconnectTries: Number.MAX_VALUE } });
+module.exports = {
+  gallery: {
+    getImages = (params, callback) => {
+      connection.query('SELECT * FROM images WHERE listing_id = ?', params, (error, results) => {
+        if (error) {
+          console.log(error);
+        } else {
+          callback(null, results);
+        }
+      })
+    },
+    postImage = (params, callback) => {
+      //can insert an object
+      connection.query('INSERT INTO images (listing_id, image_url, image_caption, user_id) SET ?', params, (error, results) => {
+        if (error) {
+          console.log(error);
+        } else {
+          callback(null, results);
+        }
+      })
+    },
+    updateImage = (params, callback) => {
+      connection.query('UPDATE images SET image_url = ? WHERE id = ?', params, (error, results) => {
+        if (error) {
+          console.log(error);
+        } else {
+          callback(null, results);
+        }
+      })
+    },
+    deleteImage = (params, callback) => {
+      cconnection.query('DELETE FROM images WHERE id = ?', params, (error, results) => {
+        if (error) {
+          console.log(error);
+        } else {
+          callback(null, results);
+        }
+      })
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+connection.query(`SELECT * FROM images WHERE listing_id = ${listing_id}`, function (error, results, fields) {
+  if (error) throw error;
+  console.log('The solution is: ', results[0].solution);
+});
+
+connection.query(`SELECT * FROM images WHERE listing_id = ${listing_id}`, function (error, results, fields) {
+  if (error) throw error;
+  console.log('The solution is: ', results[0].solution);
+});
+
+connection.query(`SELECT * FROM images WHERE listing_id = ${listing_id}`, function (error, results, fields) {
+  if (error) throw error;
+  console.log('The solution is: ', results[0].solution);
+});
 
 module.exports = {
   gallery: {
@@ -47,7 +107,7 @@ module.exports = {
         });
     },
 
-    putOne: (id, cb) => {
+    updateOne: (id, cb) => {
       db.find({ listing_id: Number(id) })
         .then((results) => {
           cb(null, results);
@@ -67,16 +127,6 @@ module.exports = {
           res.json(results);
         }
       });
-    },
-
-    deleteAll: (cb) => {
-      db.deleteMany({})
-        .then((results) => {
-          cb(null, results);
-        })
-        .catch((err) => {
-          cb(err);
-        });
     },
   },
 };

@@ -1,17 +1,9 @@
-const mongoose = require('mongoose');
-// const mongoUrl = 'mongodb://database/gallery';
-
-// mongoose.connect(mongoUrl, { server: { reconnectTries: Number.MAX_VALUE } })
-//   .then(() => {
-//     console.log('Successfully connected to MongoDb');
-//   })
-//   .catch((error) => console.log(error));
-
-
-const GallerySchema = mongoose.Schema({
-  listing_id: { type: Number, required: true, unique: true },
-  listing_title: { type: String },
-  listing_images: [{ id: Number, url: String, caption: String }],
+var mysql = require('mysql');
+var connection = mysql.createConnection({
+  host: 'localhost',
+  user: 'root',
+  database: 'carousel_images'
 });
 
-module.exports = mongoose.model('Gallery', GallerySchema);
+connection.connect();
+module.exports = connection;
