@@ -1,83 +1,60 @@
 const models = require('../models');
 
-module.exports = {
-  gallery: {
-    insertAll: (req, res) => {
-      models.gallery.insertAll(data, (err, results) => {
-        if (err) {
-          console.log(err);
-        } else {
-          res.sendStatus(200);
-        }
-      });
-    },
-
-    getOne: (req, res) => {
-      const id = req.params.id;
-      models.gallery.getOne(id, (err, results) => {
-        if (err) {
-          console.log(err);
-        } else {
-          console.log(results);
-          res.json(results);
-        }
-      });
-    },
-
-    getAll: (req, res) => {
-      models.gallery.getAll((err, results) => {
-        if (err) {
-          console.log(err);
-        } else {
-          res.json(results);
-        }
-      });
-    },
-
-    postOne: (req, res) => {
-      const id = req.params.id;
-      models.gallery.postOne(id, (err, results) => {
-        if (err) {
-          console.log(err);
-        } else {
-          console.log(results);
-          res.json(results);
-        }
-      });
-    },
-
-    putOne: (req, res) => {
-      const id = req.params.id;
-      models.gallery.putOne(id, (err, results) => {
-        if (err) {
-          console.log(err);
-        } else {
-          console.log(results);
-          res.json(results);
-        }
-      });
-    },
-
-    deleteOne: (req, res) => {
-      const id = req.params.id;
-      models.gallery.deleteOne(id, (err, results) => {
-        if (err) {
-          console.log(err);
-        } else {
-          console.log(results);
-          res.json(results);
-        }
-      });
-    },
-
-    deleteAll: (req, res) => {
-      models.gallery.deleteAll((err, results) => {
-        if (err) {
-          console.log(err);
-        } else {
-          res.sendStatus(200);
-        }
-      });
-    },
-  },
+module.exports.getImages = (req, res) => {
+  const id = parseInt(req.params.id);
+  models.gallery.getImages(id, (err, results) => {
+    if (err) {
+      console.log(err);
+    } else {
+      res.json(results);
+    }
+  });
 };
+
+module.exports.postImage = (req, res) => {
+  const id = parseInt(req.params.id);
+  const data = req.body;
+  const image = {
+    listing_id: id,
+    image_url: data.image_url,
+    image_caption: data.image_caption,
+    user_id: data.user_id
+  }
+  models.gallery.postImage(image, (err, results) => {
+    if (err) {
+      console.log(err);
+    } else {
+      res.json('posted');
+    }
+  });
+}
+
+module.exports.updateImage = (req, res) => {
+  const id = parseInt(req.params.id);
+  const data = req.body;
+  const image = {
+    listing_id: id,
+    image_url: data.image_url,
+    image_caption: data.image_caption,
+    user_id: data.user_id,
+  }
+  models.gallery.updateImage(image, (err, results) => {
+    if (err) {
+      console.log(err);
+    } else {
+      res.json('posted');
+    }
+  });
+}
+
+module.exports.deleteImage = (req, res) => {
+  const id = req.params.id;
+  models.gallery.deleteImage(id, (err, results) => {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log(results);
+      res.end('delete successful!');
+    }
+  });
+}
