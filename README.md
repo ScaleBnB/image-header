@@ -1,4 +1,6 @@
-# imageCarousel
+# imageCarousel gallery component for AirbnbB Clone application
+
+Instructions:
 
 1) npm run seed
 2) npm run build
